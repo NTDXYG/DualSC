@@ -4,40 +4,7 @@ The source code and dataset for "DualSC: Automatic Generation and Summarization 
 
 ## Code Implementation Details
 
-For the model itself, our modification is an improvement in the calculation of self-attention.
-
-The original formula for self-attention is as follows.
-$$
-\begin{equation}
-Q, K, V=Linear(X_{emb})
-\end{equation}
-$$
-
-$$
-\begin{equation}
-X_{atten}=Attention(Q, K, V)
-\end{equation}
-$$
-
-$$
-\begin{equation}
-\text { Attention }(Q, K, V)=\operatorname{softmax}\left(\frac{Q K^{T}}{\sqrt{d_{k}}}\right) V.
-\end{equation}
-$$
-
-We then have the following modified formula.
-$$
-\begin{equation}
-\textbf{Q}=\frac{(Q-\bar{Q})}{\|Q-\bar{Q}\|}, 
-\textbf{K}=\frac{(K-\bar{K})}{\|K-\bar{K}\|}
-\end{equation}
-$$
-
-$$
-\begin{equation}
-\text { Attention }(Q, K, V)=\operatorname{softmax}\left(g * \textbf{Q} \textbf{K}^{T}\right) V
-\end{equation}
-$$
+![DualSC](./figs/formula.png)
 
 1、compute init *g0*
 
