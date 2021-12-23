@@ -1,0 +1,641 @@
+input_text,target_text
+ShellCodeGen: declare the one label,one:
+"ShellCodeSum: mov al, 11",move the value 11 into the al register
+ShellCodeGen: decrement the contents of the ecx register and jump to the loop2 label if the result is not negative,dec ecx \n jns loop2
+ShellCodeGen: if the contents of the al register is equal to the value 0xf2 then jump to the _start label,"cmp al, 0xf2 \n jz _start"
+"ShellCodeSum: mov edx, 12",move 12 to edx
+ShellCodeGen: pop the value on the stack back into cx,pop cx
+"ShellCodeSum: push 0x68732f2f \n push 0x6e69622f \n mov ecx, esp",push /bin/sh onto the stack and point the ecx register to the stack register
+ShellCodeGen: jump to the code location labeled loop if the operands of the previous comparison are equal,jeq loop
+ShellCodeGen: move the contents of memory address ebp+12 into esi,"mov esi, [ebp+12]"
+ShellCodeSum: je l7,if equal then jump to label l7
+ShellCodeGen: make the kernel call,int 0x80
+"ShellCodeSum: sub esp, 4",subtract the value 4 from the esp register and save the result in esp
+ShellCodeSum: dec byte dl,decrement the byte at the address dl by one
+ShellCodeGen: allocate 10 words each initialized to 0,my_table times 10 dw 0
+ShellCodeGen: move the contents of the esi register into the dword at the memory location [esp-4],"mov dword [esp-4], esi"
+"ShellCodeSum: mov ecx, 4294948047",move 4294948047 into ecx
+ShellCodeSum: loop decode,decrement the count register and jump to decode if not equal zero
+ShellCodeGen: define a byte and initialize it to 0xcd,db 0xcd
+ShellCodeGen: put the syscall 0x01 into the eax register,push byte 0x01 \n pop eax
+ShellCodeGen: put the syscall 5 into the eax register,push byte 5 \n pop eax
+ShellCodeSum: pop esi,restore esi from the value we pushed onto the stack at the start
+ShellCodeSum: push dword 0x2f6e6962,push the double word 0x2f6e6962 onto the stack
+ShellCodeGen: restore esi from the value we pushed onto the stack at the start,pop esi
+"ShellCodeSum: mov eax, m_src",move m_src to eax
+ShellCodeGen: if not equal jump to the label nextnumber,jne nextnumber
+ShellCodeSum: push ax,push ax onto the stack
+ShellCodeSum: push dword 0x3a303a3a,push the dword 0x3a303a3a onto the stack
+ShellCodeGen: add 0xb to the al register,"add al, 0xb"
+ShellCodeGen: define syscall_execve equal to 11,syscall_execve equ 11
+ShellCodeGen: move the address of fizz string into eax,"mov eax, fizz"
+ShellCodeGen: define find_egg function,find_egg:
+"ShellCodeSum: push edi \n mov edx, esp",push the contents of the edi register onto the stack and point edx to the stack register
+ShellCodeGen: move 0x66 into eax,"mov eax, 0x66"
+ShellCodeSum: int 0x80,make the kernel call
+ShellCodeGen: zero out the eax register and jump to the l3 label if the contents of the edx register is equal to the contents of the eax register,"xor eax, eax \n cmp edx, eax \n je l3"
+"ShellCodeSum: cmp dword [eax-4],egg1",compare the dword at the memory location [eax-4] with the value of egg1
+ShellCodeGen: compare if ebx is zero,"cmp ebx, 0"
+ShellCodeSum: jmp short enc,jump short to the enc label
+ShellCodeGen: divide eax by ecx the result of the division is stored in eax and the remainder in edx,div ecx
+"ShellCodeSum: push 0x61702f2f \n push 0x6374652f \n mov ecx, esp",push the value 0x61702f2f and the value 0x6374652f onto the stack and point the ecx register to the stack register
+ShellCodeSum: push 0xb,push 0xb to the stack
+ShellCodeSum: int 0x80,system call interrupt
+ShellCodeGen: move the contents of memory address array+esi*4 into eax,"mov eax, array[esi*4]"
+"ShellCodeSum: mov cl, 32",move 32 into cl
+"ShellCodeSum: xor ebp, ebp",clear ebp register
+ShellCodeGen: move 70 into al,"mov al, 70"
+ShellCodeGen: move esp into ebx,"mov ebx, esp"
+ShellCodeGen: move the doubleword 0x65676760 into edx,"mov edx, dword 0x65676760"
+ShellCodeSum: jmp callz,jump to the callz label
+"ShellCodeSum: mov al, 63",save 63 into al
+ShellCodeSum: push dword 0x6b2f7379,push the dword 0x6b2f7379 onto the stack
+ShellCodeGen: add 0x33 to the contents in al and save the result in al,"add al, 0x33"
+ShellCodeGen: jump short to the callme label,jmp short callme
+"ShellCodeSum: shl eax, 5",left shift the contents of eax by 5 bit positions
+ShellCodeSum: global _start:,declare the global _start label
+ShellCodeGen: move al into the address [esi+22],"mov [esi+22], al"
+"ShellCodeSum: sub bx, 1634",subtract 1634 from the contents of bx register and save the result in bx
+ShellCodeGen: jump to shellcode,jmp shellcode
+ShellCodeSum: push ogin,push the contents in ogin onto the stack
+ShellCodeGen: if the contents of the eax register is not zero then jump to the label _parent else restore the top of the stack into the ecx register,"test eax, eax \n jnz _parent \n pop ecx"
+"ShellCodeSum: mov cx, 0x3b30",mov the value 0x3b30 into the cx register
+ShellCodeSum: one:,declare the one label
+ShellCodeSum: jg finished,jump if greater than to label finished
+"ShellCodeSum: mov eax, array[esi*4]",move the contents of memory address array+esi*4 into eax
+ShellCodeSum: jz _close,jump to the label _close if the zero flag is set
+"ShellCodeSum: mov byte [esp+3], 0x01",move 0x01 into the byte at address [esp+3]
+ShellCodeGen: move 0xd2c45e5e into esi,"mov esi, 0xd2c45e5e"
+ShellCodeGen: declare the global _start label,global _start:
+ShellCodeGen: put /bin/sh into edx,"push 0x68732f2f \n push 0x6e69622f \n mov edx, esp"
+ShellCodeGen: add the contents of the edi register to the contents of edi register,"add edi, edi"
+ShellCodeGen: push the value 0x2f2f2f2f onto the stack and point edi to the stack register,"push 0x2f2f2f2f \n mov edi, esp"
+"ShellCodeSum: mov esi, [ebp+12]",move the contents of memory address ebp+12 into esi
+ShellCodeGen: jump if greater than to label finished,jg finished
+"ShellCodeSum: mov cx, 0x191",move 0x191 into cx
+"ShellCodeSum: mov dl, byte [eax]",move the byte at the address [eax] into dl
+ShellCodeGen: move 0x9 into bl,"mov bl, 0x9"
+ShellCodeSum: db 0xcd,define a byte and initialize it to 0xcd
+ShellCodeGen: compare eax to zero,"cmp eax, 0"
+"ShellCodeSum: add al, 0xb",add 0xb to the al register
+ShellCodeGen: clear the ecx register and push its contents onto the stack,"xor ecx, ecx \n push ecx"
+ShellCodeGen: move 12 to edx,"mov edx, 12"
+ShellCodeGen: jump to the init label if the contents of the cl register is equal to the contents of the dl register else increment the contents of the cl register,"cmp cl, dl \n je init \n inc cl"
+ShellCodeSum: push word 0xaaaa,push the word 0xaaaa onto the stack
+"ShellCodeSum: mov eax, 63",copy file descriptor
+ShellCodeGen: push the contents of the esi register onto the stack,push esi
+"ShellCodeSum: mov bl, 0x2",move the value 0x2 into the bl register
+ShellCodeGen: move 0x191 into cx,"mov cx, 0x191"
+ShellCodeSum: push 0x6,push 0x6 onto the stack
+"ShellCodeSum: mov eax, 27",alarm
+ShellCodeSum: push 0x68732f2f,push 0x68732f2f onto the stack
+ShellCodeGen: invoke subroutine connect,"mov ebx, 3"
+ShellCodeGen: move m_src to eax,"mov eax, m_src"
+ShellCodeSum: exit:,declare the exit label
+ShellCodeGen: clear the edi register,"xor edi, edi"
+ShellCodeGen: put the byte L1 into the eax register,push byte L1 \n pop eax
+"ShellCodeSum: mov eax, 63",make the system call dup2
+"ShellCodeSum: push 0x2f2f2f2f \n mov ebx, esp",push the value 0x2f2f2f2f onto the stack and point ebx to the stack register
+"ShellCodeSum: shr eax, 24",right shift the contents of the eax register by 24 bit positions
+ShellCodeGen: move c to eax,"mov eax, c"
+ShellCodeGen: system call lseek,"mov eax, 19"
+ShellCodeGen: jump to the xordecode label if the contents of the bl register is equal to the value 0xbb else jump to the notdecode label,"cmp bl, 0xbb \n je xordecode \n jmp notdecode"
+ShellCodeGen: move 0x1 into bl,"mov bl, 0x1"
+ShellCodeSum: push 0xa,push 0xa to the stack
+"ShellCodeSum: mov eax, 0x66",move 0x66 into eax
+ShellCodeGen: clear ecx,"xor ecx, ecx"
+ShellCodeSum: push 0x04020a0a,push 0x04020a0a onto the stack
+ShellCodeGen: make the system call sigaction,push byte 0x43
+ShellCodeGen: save 63 into al,"mov al, 63"
+"ShellCodeSum: xchg ebx, eax",swap the contents of the ebx register with the contents of the eax register
+ShellCodeGen: move the value 11 into the al register,"mov al, 11"
+"ShellCodeSum: test eax, eax \n jnz _convert",if the contents of the eax register is not zero then jump to the label _convert
+ShellCodeGen: if the contents of the memory address ebp+var_a is not equal to zero then jump short to the memory location loc_4010E5,"cmp [ebp+var_a], 0 \n jnz short loc_4010E5"
+ShellCodeGen: push ascii nib/ onto stack,push 0x6e69622f
+ShellCodeGen: subtract 1663 from the contents of the bx register,"sub bx, 1663"
+ShellCodeGen: perform a logical xor between the bx register and the ax register and save the result in ax,"xor ax, bx"
+ShellCodeGen: point ebx to stack,"mov ebx, esp"
+ShellCodeGen: jump to the point in the code labeled finished if zero,jz finished
+ShellCodeGen: add 10 to the single byte stored at memory address var,"add byte [var], 10"
+ShellCodeGen: subtract 5d455523 from the contents of the eax register,"sub eax, 5d455523"
+ShellCodeGen: increment the count variable,inc [count]
+ShellCodeGen: move 0x353ffc3b into esi,"mov esi, 0x353ffc3b"
+ShellCodeGen: if the contents of the eax register is zero then jump to the label socket,"test eax, eax \n jz socket"
+ShellCodeGen: clear the edx register,cdq
+ShellCodeGen: push the word 0x6f64 to the stack,push word 0x6f64
+"ShellCodeSum: push 0x2f2f2f2f \n mov edi, esp",push the value 0x2f2f2f2f onto the stack and point edi to the stack register
+ShellCodeGen: pause,"mov eax, 29"
+ShellCodeGen: decrement the byte in dl,dec byte dl
+ShellCodeSum: dec cl \n jns loopinghere,decrement the contents of the cl register and jump to the loopinghere label if the result is not negative
+"ShellCodeSum: mov ebx, ecx",move ecx into ebx
+"ShellCodeSum: mov edx, esp",move the stack pointer into edx
+ShellCodeGen: initialize ecx with decimal value 0,"xor ecx, ecx"
+ShellCodeGen: move 0x34399797 into esi,"mov esi, 0x34399797"
+"ShellCodeSum: mov eax, 6",make the system call to close the file
+ShellCodeSum: push byte 6,push the byte 6 onto the stack
+ShellCodeGen: load the effective address of esi+13 into esi+13,"lea edi, [esi+13]"
+ShellCodeGen: decrement the byte at the address dl by one,dec byte dl
+"ShellCodeSum: xor ebx, ebx \n push ebx",push zero onto the stack
+ShellCodeSum: pop eax,restore the original value of eax
+"ShellCodeSum: xor [ecx + 116], dh",perform a logical xor between the address speicified by [ecx + 116] and the dh register and save the result in [ecx + 116]
+ShellCodeGen: move 02001 into cx,"mov cx, 02001"
+ShellCodeGen: allocate a single byte of memory and initialize it to the letter 'c',letter_c db 'c'
+"ShellCodeSum: mov [esi+39], ebx",move ebx into the address [esi+39]
+ShellCodeGen: subtract one from the contents of eax,dec eax
+ShellCodeGen: jump to the label l1 if the unsigned contents of the dl register is lower than the unsigned contents of the cl register else move the value 0x39 to the al register,"cmp dl, cl \n jb l1 \n mov al, 0x39"
+ShellCodeGen: push zero onto the stack,"xor ebx, ebx \n push ebx"
+ShellCodeGen: return a code of zero,"mov ebx, 0"
+ShellCodeSum: call iprintlf,call the iprintlf function
+ShellCodeGen: section text,section .text
+"ShellCodeSum: mov dl, 0xc",move 0xc into dl
+ShellCodeSum: pop ax,pop the last element pushed onto the stack into ax
+"ShellCodeSum: xor ebx, ebx \n cmp eax, ebx \n je exit",zero out the ebx register and jump to the exit label if the contents of the eax register is equal to the contents of the ebx register
+"ShellCodeSum: mov edx, [esi+4*ebx]",move the 4 bytes of data at address esi+4*ebx into edx
+ShellCodeGen: increment the contents of the dl register,inc dl
+"ShellCodeSum: mov edx, dword 0x65676760",move the doubleword 0x65676760 into edx
+"ShellCodeSum: mov eax, 2",fork
+"ShellCodeSum: cmp edx, 0x43 \n ja loop \n push edx",jump to the loop label if the unsigned contents of the edx register is greater than the unsigned value 0x43 else push the contents of the edx register onto the stack
+ShellCodeGen: pop doublewords from the stack into the general purpose registers,popad
+ShellCodeSum: jz call_decoded,jump to the call_decoded label if the zero flag is set
+ShellCodeGen: move m_src1 to ebx,"mov ebx, m_src1"
+"ShellCodeSum: cmp al, 9 \n jg l1",if the contents of the al register is greater than the decimal value 9 then jump to the label l1
+ShellCodeSum: db 0x68,declare a byte with no label containing the value 0x68
+ShellCodeGen: push the value 0x2f2f2f2f onto the stack and point ebx to the stack register,"push 0x2f2f2f2f \n mov ebx, esp"
+ShellCodeGen: decrement the count register and jump to decode if not equal zero,loop decode
+ShellCodeSum: jmp shellcode,jump to shellcode
+ShellCodeGen: jump to the label l2 if the contents of the cl register is greater than the decimal value 12,"cmp cl, 12 \n jg l2"
+ShellCodeSum: neg edx,replaces the contents of the edx register with its two's complement
+"ShellCodeSum: cmp bl, 57",compare ebx register's lower half value against ascii value 57
+ShellCodeGen: move ebx into the address [esi+39],"mov [esi+39], ebx"
+ShellCodeGen: jump to the l3 label if the contents of the ax register is not equal to the contents of the bx register else jump to the while label,"cmp ax, bx \n jne l3 \n jmp while"
+"ShellCodeSum: sub eax, 0x04feca01",subtract 0x04feca01 from the contents in eax and save the result in eax
+"ShellCodeSum: cmp bl, 78h \n jl short loc_402B1D",jump to the memory location loc_402B1D if the contents of the bl register is less than the value 78h
+ShellCodeSum: wrap_around:,declare the wrap_around label
+ShellCodeGen: make the system call to open the file,"mov eax, 5"
+"ShellCodeSum: push 0x68732f2f \n push 0x6e69622f \n mov eax, esp",move /bin/sh into eax
+ShellCodeGen: restore ebp register,pop ebp
+ShellCodeGen: right shift the contents of the eax register by 24 bit positions,"shr eax, 24"
+"ShellCodeSum: mov al, byte 2h",move the byte at the address 2h into al
+"ShellCodeSum: mov eax, 19",lseek
+ShellCodeGen: push the value 10 onto the stack and point eax to the stack register,"push 10 \n mov eax, esp"
+"ShellCodeSum: mov al, 37",move 37 into al
+ShellCodeGen: subtract the address in ebx from the address in eax,"sub eax, ebx"
+ShellCodeGen: jump to the loop label if the unsigned contents of the edx register is greater than the unsigned value 0x43 else push the contents of the edx register onto the stack,"cmp edx, 0x43 \n ja loop \n push edx"
+"ShellCodeSum: mov esi, 0xd2c45e5e",move 0xd2c45e5e into esi
+"ShellCodeSum: sub esp, 4",allocate space on the stack for local variable
+ShellCodeGen: clear edx,"xor edx, edx"
+ShellCodeGen: define the byte string '/sbin/ipchains#-f#',db '/sbin/ipchains#-f#'
+ShellCodeSum: jnz 0x8,jump to 0x8 if not zero
+ShellCodeGen: jump short to the fileaddress label,jmp short fileaddress
+ShellCodeSum: jmp short inc_dec,jump short to inc_dec
+ShellCodeGen: subtract 0x04feca01 from the contents in eax and save the result in eax,"sub eax, 0x04feca01"
+"ShellCodeSum: mov cx, [esi]",move the contents of the esi register into the cx register
+"ShellCodeSum: xor ebx, ebx",zero out the ebx register
+ShellCodeGen: push 0x4c5a304b onto the stack,push 0x4c5a304b
+ShellCodeGen: compare the contents of edx and the contents of ebx,"cmp edx, ebx"
+"ShellCodeSum: sub esp, 0x24",subtract 0x24 from the contents in esp and save the result in esp
+"ShellCodeSum: mov esi, 0x34399797",move 0x34399797 into esi
+ShellCodeGen: move 0x20 into dl,"mov dl, 0x20"
+"ShellCodeSum: mov ebx, 0x40000",move the 32-bit value 0x40000 into register ebx
+ShellCodeGen: jump short to inc_dec,jmp short inc_dec
+ShellCodeGen: move 0x0 into ecx,"mov ecx, 0x0"
+ShellCodeGen: compare the dword at the memory location [eax-8] with the value of egg,"cmp dword [eax-8],egg"
+ShellCodeGen: jump to the memory address 0xff if the unsigned contents of the cl register is lower than the unsigned value 0x11 else add the 0x5 value to the dl register,"cmp cl, 0x11 \n jb 0xff \n add dl, 0x5"
+ShellCodeGen: move close_syscall into al,"mov al, close_syscall"
+ShellCodeGen: move the contents of src variable into edx,"mov edx, src"
+ShellCodeGen: load the effective address [ebp+39] into ebx,"lea ebx, [ebp+39]"
+ShellCodeGen: compare the dword at the memory location [eax-4] with the value of egg1,"cmp dword [eax-4],egg1"
+ShellCodeSum: push dword 0x0101017f,push the dword 0x0101017f onto the stack
+ShellCodeGen: zero out the ebx register and push zero onto the stack,"xor ebx, ebx \n push ebx"
+ShellCodeGen: decrement the contents of the ecx register and jump to the duploop label if the result is not negative,dec ecx \n jns duploop
+ShellCodeGen: move ecx into ebx,"mov ebx, ecx"
+ShellCodeSum: pop bx,pop the last element pushed onto the stack into bx
+"ShellCodeSum: cmp dword [eax-8],egg",compare the dword at the memory location [eax-8] with the value of egg
+ShellCodeGen: move integer 11 to edx,"mov edx, 11"
+ShellCodeSum: push 0x72706475,push 0x72706475 onto the stack
+ShellCodeGen: subtract the value 4 from the esp register and save the result in esp,"sub esp, 4"
+"ShellCodeSum: mov [var1], eax",move the contents of eax into the 4 bytes at memory address var1
+ShellCodeGen: move the value 0x2 into the bl register,"mov bl, 0x2"
+ShellCodeGen: push the 0x2f2f2f6e onto the stack,push 0x2f2f2f6e
+"ShellCodeSum: xor ecx, ecx \n push ecx",clear the ecx register and push its contents onto the stack
+ShellCodeGen: system call interrupt,int 0x80
+ShellCodeSum: int 0x80,make the system call
+"ShellCodeSum: mov edx, 11",move integer 11 to edx
+ShellCodeGen: push the doubleword 0x62732f2f to the stack,push dword 0x62732f2f
+ShellCodeGen: swap the contents of the eax register with the contents of the esi register,"xchg eax, esi"
+"ShellCodeSum: cmp ebx, 0",compare if ebx is zero
+"ShellCodeSum: cmp bl, al \n je loop_2",jump to the loop_2 label if the contents of the bl register is equal to the contents of the al register
+ShellCodeSum: jz _read,jump to the label _read if the zero flag is set
+ShellCodeGen: push the value 0x6374652f onto the stack and point esi to the stack register,"push 0x6374652f \n mov esi, esp"
+"ShellCodeSum: mov al, 0x5",move 0x5 into al
+"ShellCodeSum: mov dword [esp-4], esi",move the contents of the esi register into the dword at the memory location [esp-4]
+"ShellCodeSum: mov dl, 0x20",move 0x20 into dl
+ShellCodeGen: move the byte at the address 2h into al,"mov al, byte 2h"
+ShellCodeGen: load the effective address of the result of the operation [esi +4] into the esi register,"lea esi, [esi +4]"
+ShellCodeGen: jump to the connect label if the operands of the above comparison are equals,je connect
+ShellCodeGen: move 7 into the byte at address cl,"mov byte cl, 7"
+ShellCodeSum: push byte 16 \n pop eax,put the syscall 16 into the eax register
+ShellCodeGen: if the contents of the eax register is zero then jump to the label close,"test eax, eax \n jz close"
+"ShellCodeSum: test eax, eax \n jz check_html \n jmp while",jump to the label check_html if the contents of the eax register is zero else jump to the while label
+"ShellCodeSum: mov ebx, m_src1",move m_src1 to ebx
+ShellCodeGen: clear the direction flag,cld
+ShellCodeGen: move 0x5 into al,"mov al, 0x5"
+"ShellCodeSum: mov byte al, 0x3f",move 0x3f into the byte at address al
+ShellCodeGen: put the syscall 0x3f into the eax register,push byte 0x3f \n pop eax
+ShellCodeGen: system call socketcall,"mov al, 0x66"
+ShellCodeGen: jump to label done if below or equal,jbe done
+ShellCodeGen: clear ebp register,"xor ebp, ebp"
+ShellCodeGen: call set_argv,call set_argv
+ShellCodeGen: move n to ebx,"mov ebx, n"
+ShellCodeGen: push the 0x68732f2f value onto the stack,push 0x68732f2f
+ShellCodeGen: push the word 0xaaaa onto the stack,push word 0xaaaa
+ShellCodeGen: move 102 into ax,"mov ax, 102"
+ShellCodeGen: jump to the memory location loc_402B1D if the contents of the bl register is less than the value 78h,"cmp bl, 78h \n jl short loc_402B1D"
+ShellCodeGen: push the word 0x2 onto the stack,push word 0x2
+ShellCodeGen: use stdout,"mov ebx, 1"
+ShellCodeGen: push 0x70692f6e onto the stack,push 0x70692f6e
+ShellCodeGen: compare the contents of the al register and the contents of the cl register,"cmp al, cl"
+"ShellCodeSum: test eax, eax \n jnz _parent \n pop ecx",if the contents of the eax register is not zero then jump to the label _parent else restore the top of the stack into the ecx register
+ShellCodeSum: push 0x69616863,push the 0x69616863 onto the stack
+ShellCodeGen: alarm,"mov eax, 27"
+ShellCodeGen: jump to the _next label if the operands of the above comparison are not equals,jne _next
+ShellCodeGen: if the contents of the al register is zero then jump to the label found else increment the contents of the ecx register,"test al, al \n jz found \n inc ecx"
+ShellCodeGen: push the contents of the edi register onto the stack and point edx to the stack register,"push edi \n mov edx, esp"
+"ShellCodeSum: xor edx, edx",clear edx
+ShellCodeSum: pop ebp,restore ebp register
+ShellCodeGen: push 0x68732f2f onto the stack,push 0x68732f2f
+ShellCodeGen: perform xor operation between eax register and ebx register and store the result in eax,"xor eax, ebx"
+"ShellCodeSum: mov al, 0x66",system call socketcall
+ShellCodeSum: push 0x6e69622f,push ascii nib/ onto stack
+ShellCodeGen: return the address off the stack and returns control to that location,ret
+ShellCodeGen: push 6 onto the stack,push 6
+"ShellCodeSum: cmp al, cl",compare the contents of the al register and the contents of the cl register
+ShellCodeGen: call the iprintlf function,call iprintlf
+ShellCodeSum: inc esi,increment the contents of the esi register
+ShellCodeGen: push 0x74756f2f onto the stack,push 0x74756f2f
+ShellCodeSum: push 0x1,push 0x1 to the stack
+ShellCodeGen: clear ebx,"xor ebx, ebx"
+"ShellCodeSum: push dword 0x74652f2f \n mov ebx, esp",push double word 0x74652f2f onto the stack and point the ebx register to the stack register
+"ShellCodeSum: mov eax, 19",system call lseek
+ShellCodeGen: jump to the EncodedShellcode label if the contents of the cl register is equal to the contents of the dl register,"cmp cl, dl \n je EncodedShellcode"
+"ShellCodeSum: cmp ax, bx \n jne l3 \n jmp while",jump to the l3 label if the contents of the ax register is not equal to the contents of the bx register else jump to the while label
+"ShellCodeSum: cmp dl, 1 \n je exit \n jmp reading",if the contents of the dl register is equal to the vale 1 then jump to the exit label else jump to the reading label
+ShellCodeGen: define shellcode label,shellcode:
+ShellCodeGen: restore the original value of eax,pop eax
+ShellCodeSum: push dword 0x62732f2f,push the dword 0x62732f2f onto the stack
+"ShellCodeSum: db '0',10","define the byte string '0',10"
+"ShellCodeGen: define port array of 5 bytes and initialize it to 0xd4, 0x31, 0xc0, 0xa8, 0x3, 0x77","port: db 0xd4, 0x31, 0xc0, 0xa8, 0x3, 0x77"
+"ShellCodeSum: cmp eax, 0",compare eax to zero
+ShellCodeGen: define my_var word variable and initialize it to 0abcdh,my_var dw 0abcdh
+ShellCodeGen: restore the top of the stack into the dx register,pop dx
+ShellCodeSum: push word 0x3930,push the word 0x3930 onto the stack
+ShellCodeGen: lseek,"mov eax, 19"
+"ShellCodeSum: xor eax, ebx",perform xor operation between eax register and ebx register and store the result in eax
+"ShellCodeSum: mov esi, 0x353ffc3b",move 0x353ffc3b into esi
+"ShellCodeSum: mov eax, 21",get 21 in the eax register
+ShellCodeGen: move 0x9ed into cx,"mov cx, 0x9ed"
+ShellCodeSum: section .text,section text
+ShellCodeGen: jump to the label read,jmp read
+ShellCodeGen: move hexlen into edx,"mov edx, hexlen"
+ShellCodeGen: push the contents in ogin onto the stack,push ogin
+ShellCodeGen: put the syscall 16 into the eax register,push byte 16 \n pop eax
+ShellCodeSum: enc:,declare the enc label
+"ShellCodeSum: mov ebx, 1",specify file descriptor 1 standard output
+ShellCodeGen: put /bin/sh into the ecx register,"push long 0x68732f2f \n push long 0x6e69622f \n mov ecx, esp"
+ShellCodeSum: push dword 0x2f3a3a30,push the dword 0x2f3a3a30 onto the stack
+ShellCodeSum: cycle:,define cycle label
+ShellCodeSum: push 0x37373333,push the 0x37373333 onto the stack
+ShellCodeGen: jump to the memory address 0x8 if the contents of the eax register is not equal to the contents of the eax register else zero out the eax register,"cmp eax, eax \n jne 0x8 \n xor eax, eax"
+ShellCodeGen: get 21 in the eax register,"mov eax, 21"
+ShellCodeSum: jmp short setup,jump short to the setup label
+ShellCodeGen: move the byte at the address [eax] into dl,"mov dl, byte [eax]"
+ShellCodeGen: move the 4 bytes of data at address esi+4*ebx into edx,"mov edx, [esi+4*ebx]"
+"ShellCodeSum: mov al, write_syscall",move write_syscall into al
+ShellCodeGen: compare ebx register's lower half value against ascii value 57,"cmp bl, 57"
+ShellCodeGen: make the system call,int 0x80
+ShellCodeSum: do_dup:,declare the do_dup label
+"ShellCodeSum: mov eax, c",move c to eax
+ShellCodeSum: push 0x4c5a304b,push 0x4c5a304b onto the stack
+ShellCodeSum: data:,declare the data label
+ShellCodeGen: jump short to the enc label,jmp short enc
+ShellCodeGen: move 4294948047 into ecx,"mov ecx, 4294948047"
+ShellCodeGen: zero out the ebx register,"xor ebx, ebx"
+ShellCodeGen: create the doubleword variable y in memory and initialize it to zero,y: dd 0x0
+ShellCodeGen: if the contents of the dl register is equal to the vale 1 then jump to the exit label else jump to the reading label,"cmp dl, 1 \n je exit \n jmp reading"
+"ShellCodeSum: cmp bl, 78h \n jg short loc_402B1D",jump to the memory location loc_402B1D if the contents of the bl register is greater than the value 78h
+ShellCodeGen: perform the xor operation between the al register and the value 0x41,"xor al, 0x41"
+ShellCodeGen: allocate space on the stack for local variable,"sub esp, 4"
+ShellCodeSum: pop dx,restore the top of the stack into the dx register
+ShellCodeSum: word1 word 65535,define word1 unsigned word and initialize it to 65535
+"ShellCodeSum: shl ecx, 1",multiply ecx by 2 using left shift
+"ShellCodeSum: port: db 0xd4, 0x31, 0xc0, 0xa8, 0x3, 0x77","define port array of 5 bytes and initialize it to 0xd4, 0x31, 0xc0, 0xa8, 0x3, 0x77"
+"ShellCodeSum: push 0x69622f2f \n mov ecx, esp",push the value 0x69622f2f onto the stack and point the ecx register to the stack register
+"ShellCodeSum: add byte [var], 10",add 10 to the single byte stored at memory address var
+ShellCodeGen: push the value 0x61702f2f and the value 0x6374652f onto the stack and point the ecx register to the stack register,"push 0x61702f2f \n push 0x6374652f \n mov ecx, esp"
+"ShellCodeSum: mov ebx, 3",invoke subroutine connect
+ShellCodeGen: define msg as the byte string 'mv test.txt .test.txt && head -c 32 /dev/urandom | base64 | openssl aes-256-cbc -e -in .test.txt -out test.txt -pbkdf2 -k - && rm .test.txt',"msg db 'mv test.txt .test.txt && head -c 32 /dev/urandom | base64 | openssl aes-256-cbc -e -in .test.txt -out test.txt -pbkdf2 -k - && rm .test.txt', 0x0a"
+"ShellCodeSum: mov ebx, 1",use stdout
+"ShellCodeSum: xor ecx, bh",perform a logical xor between the ecx register and the bh register and save the result in ecx
+ShellCodeGen: put the syscall 11 into the al register,"mov al, 11"
+ShellCodeGen: push 0x3d4c4c41 onto the stack,push 0x3d4c4c41
+ShellCodeGen: jump to the label check_html if the contents of the eax register is zero else jump to the while label,"test eax, eax \n jz check_html \n jmp while"
+ShellCodeGen: if the contents of the eax register is equal to the contents of the edi register then jump to the memory address 0x47,"cmp eax, ebx \n je 0x47"
+"ShellCodeSum: shl edx, 9",left shift the contents of the edx register by 9 bits
+ShellCodeGen: push the 0x656c6966 onto the stack,push 0x656c6966
+"ShellCodeSum: push 0x6475732f \n push 0x6374652f \n mov edx, esp",push the value 0x6475732f and the value 0x6374652f onto the stack and point the edx register to the stack register
+ShellCodeGen: push the 0x37373333 onto the stack,push 0x37373333
+ShellCodeSum: ret,return to caller
+"ShellCodeSum: test eax, eax \n js _while_loop",jump to the label _while_loop if the contents of the eax register is negative
+ShellCodeGen: make the system call to close the file,"mov eax, 6"
+ShellCodeGen: if the contents of the eax register is not equal to the contents of the edi register then jump to the infinite label,"cmp eax, edi \n jne infinite"
+ShellCodeGen: decrement the count register and jump to check_even_odd if the count is not equal to zero,loop check_even_odd
+"ShellCodeSum: push long 0x68732f2f \n push long 0x6e69622f \n mov ecx, esp",put /bin/sh into the ecx register
+ShellCodeSum: push word 0x6f64,push the word 0x6f64 to the stack
+ShellCodeSum: inc dl,increment the contents of the dl register
+"ShellCodeSum: push 0x6374652f \n mov esi, esp",push the value 0x6374652f onto the stack and point esi to the stack register
+ShellCodeGen: push the dword 0x2f3a3a30 onto the stack,push dword 0x2f3a3a30
+ShellCodeSum: push byte 0x43 \n pop eax,put the syscall 0x43 into the eax register
+"ShellCodeSum: push 10 \n mov eax, esp",push the value 10 onto the stack and point eax to the stack register
+ShellCodeSum: push 0x3d4c4c41,push 0x3d4c4c41 onto the stack
+ShellCodeSum: push 0x656c6966,push the 0x656c6966 onto the stack
+ShellCodeSum: push byte 0x43,make the system call sigaction
+"ShellCodeSum: mov ebx, n",move n to ebx
+ShellCodeGen: move edi into ecx,"mov ecx, edi"
+"ShellCodeSum: cmp dl, cl \n jb l1 \n mov al, 0x39",jump to the label l1 if the unsigned contents of the dl register is lower than the unsigned contents of the cl register else move the value 0x39 to the al register
+ShellCodeGen: move ebx into ebx+8,"mov [ebx+8], ebx"
+ShellCodeGen: move 0x33392e31 into eax,"mov eax, 0x33392e31"
+ShellCodeSum: div ecx,divide eax by ecx the result of the division is stored in eax and the remainder in edx
+ShellCodeGen: push the 0x76766c2d onto the stack,push 0x76766c2d
+ShellCodeGen: if the contents of the eax register is not zero then jump to the label _convert,"test eax, eax \n jnz _convert"
+ShellCodeGen: increment the contents of the esi register,inc esi
+"ShellCodeSum: mov ax, 102",move 102 into ax
+ShellCodeGen: push 0x04020a0a onto the stack,push 0x04020a0a
+ShellCodeSum: jz child,jump to the child label if the zero flag is set
+ShellCodeGen: move the contents of eax into the 4 bytes at memory address var1,"mov [var1], eax"
+ShellCodeGen: push the value 0x6e7a762d onto the stack and point the ebx register to the stack register,"push 0x6e7a762d \n mov ebx, esp"
+"ShellCodeSum: cmp cl, dl \n je init \n inc cl",jump to the init label if the contents of the cl register is equal to the contents of the dl register else increment the contents of the cl register
+ShellCodeSum: jz finished,jump to the point in the code labeled finished if zero
+ShellCodeGen: pop the last element pushed onto the stack into bx,pop bx
+"ShellCodeSum: xor ax, bx",perform a logical xor between the bx register and the ax register and save the result in ax
+ShellCodeGen: jump to the label _close if the zero flag is set,jz _close
+"ShellCodeGen: define the byte string '0',10","db '0',10"
+ShellCodeGen: push 0x78 to the stack,push 0x78
+"ShellCodeSum: mov ecx, y",move the contents of y into ecx
+ShellCodeGen: zero out the ebx register and jump to the exit label if the contents of the eax register is equal to the contents of the ebx register,"xor ebx, ebx \n cmp eax, ebx \n je exit"
+ShellCodeGen: pop the value on the stack back into ebx,pop ebx
+ShellCodeGen: push 0x1 to the stack,push 0x1
+ShellCodeSum: my_table times 10 dw 0,allocate 10 words each initialized to 0
+ShellCodeSum: jbe done,jump to label done if below or equal
+"ShellCodeSum: xor ebx, ebx",set the ebx register to null
+ShellCodeGen: jump to the call_decoded label if the zero flag is set,jz call_decoded
+"ShellCodeSum: mov edx, hexlen",move hexlen into edx
+ShellCodeGen: zero out the ecx register,"xor ecx, ecx"
+ShellCodeGen: clear ecx register,"xor ecx, ecx"
+"ShellCodeSum: numbers dw 34, 45, 56, 67, 75, 89",declare an array of six words each initialized with the numbers 34 45 56 67 75 89
+ShellCodeGen: declare the do_dup label,do_dup:
+"ShellCodeSum: mov cx, 0x9ed",move 0x9ed into cx
+ShellCodeGen: move ecx into ebp,"mov ebp, ecx"
+ShellCodeSum: push byte 5 \n pop eax,put the syscall 5 into the eax register
+"ShellCodeSum: test al, al \n jz found \n inc ecx",if the contents of the al register is zero then jump to the label found else increment the contents of the ecx register
+"ShellCodeSum: test eax, eax \n jz check_html",if the contents of the eax register is zero then jump to the label check_html
+ShellCodeGen: move the stack pointer into edx,"mov edx, esp"
+ShellCodeGen: push the 4 bytes at address var2 onto the stack,push [var2]
+"ShellCodeSum: mov ebx, esp",point ebx to stack
+"ShellCodeSum: mov eax, 0x33392e31",move 0x33392e31 into eax
+"ShellCodeSum: cmp eax, ebx \n je 0x47",if the contents of the eax register is equal to the contents of the edi register then jump to the memory address 0x47
+ShellCodeGen: jump to the loop_2 label if the contents of the bl register is equal to the contents of the al register,"cmp bl, al \n je loop_2"
+"ShellCodeSum: cmp edx, ebx",compare the contents of edx and the contents of ebx
+"ShellCodeSum: cmp eax, edi \n jne infinite",if the contents of the eax register is not equal to the contents of the edi register then jump to the infinite label
+ShellCodeGen: move the contents of cl into the byte at memory address esi+eax,"mov [esi+eax], cl"
+ShellCodeGen: if the contents of the eax register is not equal to the contents of the edi register then jump to the infinite label else zero out the eax register,"cmp eax, edi \n jne infinite \n xor eax, eax"
+"ShellCodeSum: push 0x7461632f \n push 0x6e69622f \n mov ecx, esp",push the value 0x7461632f and the value 0x6e69622f onto the stack and point the ecx register to the stack register
+ShellCodeGen: move the remainder into edi,"mov edi, edx"
+ShellCodeSum: push 0x74756f2f,push 0x74756f2f onto the stack
+ShellCodeSum: jmp short cycle,jump short to the cycle label
+"ShellCodeSum: cmp bl, 0xbb \n je xordecode \n jmp notdecode",jump to the xordecode label if the contents of the bl register is equal to the value 0xbb else jump to the notdecode label
+ShellCodeGen: push 0x4c4c4128 onto the stack,push 0x4c4c4128
+ShellCodeGen: jump short to the cycle label,jmp short cycle
+"ShellCodeSum: lea ebx, [ebp+39]",load the effective address [ebp+39] into ebx
+ShellCodeSum: push 0x31373737,push 0x31373737 onto the stack
+ShellCodeGen: push 0x72706475 onto the stack,push 0x72706475
+ShellCodeGen: push the value 0x69622f2f onto the stack and point the ecx register to the stack register,"push 0x69622f2f \n mov ecx, esp"
+"ShellCodeSum: mov edx, src",move the contents of src variable into edx
+"ShellCodeSum: cmp al, 0xf2 \n jz _start",if the contents of the al register is equal to the value 0xf2 then jump to the _start label
+ShellCodeSum: cld,clear the direction flag
+ShellCodeSum: je connect,jump to the connect label if the operands of the above comparison are equals
+"ShellCodeSum: push 0x68732f2f \n push 0x6e69622f \n mov edx, esp",put /bin/sh into edx
+ShellCodeGen: declare the enc label,enc:
+"ShellCodeSum: mov ax, table[esi*4]",move the memory offset table+esi*4 into ax
+ShellCodeSum: popad,pop doublewords from the stack into the general purpose registers
+ShellCodeGen: push the dword 0x3a303a3a onto the stack,push dword 0x3a303a3a
+ShellCodeGen: specify file descriptor 1 standard output,"mov ebx, 1"
+ShellCodeGen: push the word 0x3930 onto the stack,push word 0x3930
+ShellCodeSum: push 0x2f2f2f6e,push the 0x2f2f2f6e onto the stack
+"ShellCodeSum: test eax, eax \n jz socket",if the contents of the eax register is zero then jump to the label socket
+"ShellCodeSum: mov eax, 5",make the system call to open the file
+ShellCodeGen: subtract 1768009314 from the contents of the edi register,"sub edi, 1768009314"
+ShellCodeSum: jmp short fileaddress,jump short to the fileaddress label
+"ShellCodeSum: add edi, edi",add the contents of the edi register to the contents of edi register
+ShellCodeGen: replaces the contents of the edx register with its two's complement,neg edx
+ShellCodeSum: push 0x76766c2d,push the 0x76766c2d onto the stack
+ShellCodeSum: push 0x78,push the 0x78 onto the stack
+"ShellCodeSum: sub eax, 216",subtract 216 from the value stored in eax
+ShellCodeGen: subtract 1634 from the contents of bx register and save the result in bx,"sub bx, 1634"
+ShellCodeGen: jump to the memory location loc_402B1D if the contents of the bl register is greater than the value 78h,"cmp bl, 78h \n jg short loc_402B1D"
+ShellCodeSum: push 0x53534150,push 0x53534150 onto the stack
+ShellCodeSum: push byte 0x3f \n pop eax,put the syscall 0x3f into the eax register
+ShellCodeSum: jne nextnumber,if not equal jump to the label nextnumber
+ShellCodeGen: preserve eax on the stack,push eax
+"ShellCodeSum: mov eax, 0x6c6c756e",move 0x6c6c756e into eax
+ShellCodeSum: dec ecx \n jns loop2,decrement the contents of the ecx register and jump to the loop2 label if the result is not negative
+"ShellCodeSum: sub bx, 1663",subtract 1663 from the contents of the bx register
+"ShellCodeSum: xor al, 0x41",perform the xor operation between the al register and the value 0x41
+"ShellCodeSum: mov eax, 29",pause
+ShellCodeSum: push 0x4c4c4128,push 0x4c4c4128 onto the stack
+ShellCodeGen: declare the wrap_around label,wrap_around:
+"ShellCodeSum: xor ecx, ecx",initialize ecx with decimal value 0
+ShellCodeGen: move 0x01 into the byte at address [esp+3],"mov byte [esp+3], 0x01"
+ShellCodeGen: left shift the contents of the edx register by 9 bits,"shl edx, 9"
+ShellCodeGen: swap the contents of the ebx register with the contents of the eax register,"xchg ebx, eax"
+ShellCodeGen: push the double word 0x2f6e6962 onto the stack,push dword 0x2f6e6962
+ShellCodeSum: db '/sbin/ipchains#-f#',define the byte string '/sbin/ipchains#-f#'
+ShellCodeSum: push 0x68736162,push 0x68736162 onto the stack
+ShellCodeSum: push esi,push the contents of the esi register onto the stack
+"ShellCodeSum: cmp cl, 0x11 \n jb 0xff \n add dl, 0x5",jump to the memory address 0xff if the unsigned contents of the cl register is lower than the unsigned value 0x11 else add the 0x5 value to the dl register
+ShellCodeSum: push 0x0a4c4c41,push the 0x0a4c4c41 onto the stack
+ShellCodeGen: increment ecx,inc ecx
+ShellCodeGen: move /bin/sh into eax,"push 0x68732f2f \n push 0x6e69622f \n mov eax, esp"
+ShellCodeSum: jmp short callme,jump short to the callme label
+"ShellCodeSum: xor eax, eax \n cmp edx, eax \n je l3",zero out the eax register and jump to the l3 label if the contents of the edx register is equal to the contents of the eax register
+ShellCodeSum: jmp short 0x63,jump short to 0x63
+ShellCodeSum: push byte 0x66 \n pop eax,put the syscall 0x66 into the eax register
+ShellCodeGen: copy file descriptor,"mov eax, 63"
+"ShellCodeSum: sub eax, ebx",subtract the address in ebx from the address in eax
+"ShellCodeSum: mov eax, fizz",move the address of fizz string into eax
+"ShellCodeSum: cmp eax, edi \n jne infinite \n xor eax, eax",if the contents of the eax register is not equal to the contents of the edi register then jump to the infinite label else zero out the eax register
+ShellCodeSum: push byte L1 \n pop eax,put the byte L1 into the eax register
+"ShellCodeSum: test eax, eax \n jnz _parent \n pop ecx",jump to the label _parent if the contents of the eax register is not zero else restore the top of the stack into the ecx register
+"ShellCodeSum: xor ebx, ebx",clear ebx
+"ShellCodeSum: add al, 0x33",add 0x33 to the contents in al and save the result in al
+ShellCodeGen: push the value 0x7461632f and the value 0x6e69622f onto the stack and point the ecx register to the stack register,"push 0x7461632f \n push 0x6e69622f \n mov ecx, esp"
+"ShellCodeSum: xor ebx, ebx \n push ebx",clear the ebx register and push its contents onto the stack
+ShellCodeGen: define word1 unsigned word and initialize it to 65535,word1 word 65535
+"ShellCodeSum: mov cx, 02001",move 02001 into cx
+"ShellCodeSum: mov edi, edx",move the remainder into edi
+ShellCodeGen: move write_syscall into al,"mov al, write_syscall"
+ShellCodeGen: push the 0x69616863 onto the stack,push 0x69616863
+"ShellCodeSum: push 0x6e7a762d \n mov ebx, esp",push the value 0x6e7a762d onto the stack and point the ebx register to the stack register
+ShellCodeGen: push name onto the stack,push name
+ShellCodeGen: jump short to the setup label,jmp short setup
+"ShellCodeSum: mov eax, 67",make the system call sigaction
+ShellCodeGen: make the system call sigaction,"mov eax, 67"
+ShellCodeSum: push 0x68732f2f,push the 0x68732f2f value onto the stack
+ShellCodeSum: push 0x2e312e31,push 0x2e312e31 to the stack
+ShellCodeGen: jump short to 0x63,jmp short 0x63
+ShellCodeSum: inc [count],increment the count variable
+"ShellCodeSum: xchg eax, esi",swap the contents of the eax register with the contents of the esi register
+"ShellCodeSum: lea edi, [esi+13]",load the effective address of esi+13 into esi+13
+ShellCodeSum: push word 0644o,push the word 0644o onto the stack
+ShellCodeSum: push 0x70692f6e,push 0x70692f6e onto the stack
+ShellCodeSum: pop ebx,pop the value on the stack back into ebx
+ShellCodeGen: push 0x6 onto the stack,push 0x6
+ShellCodeGen: perform a logical xor between the ecx register and the bh register and save the result in ecx,"xor ecx, bh"
+"ShellCodeSum: mov eax, b",move b to eax
+ShellCodeGen: pop the last element pushed onto the stack into ax,pop ax
+ShellCodeSum: jmp read,jump to the label read
+"ShellCodeSum: xor edi, edi",clear the edi register
+ShellCodeSum: call set_argv,call set_argv
+ShellCodeGen: multiply ecx by 2 using left shift,"shl ecx, 1"
+ShellCodeGen: if the contents of the al register is greater than the decimal value 9 then jump to the label l1,"cmp al, 9 \n jg l1"
+"ShellCodeSum: lea edx, [ebx+12]",load the effective address of ebx+12 into edx
+ShellCodeSum: push 0x78,push 0x78 to the stack
+"ShellCodeSum: sub edi, 1768009314",subtract 1768009314 from the contents of the edi register
+"ShellCodeSum: mov bl, 0x1",move 0x1 into bl
+ShellCodeGen: push 0x31373737 onto the stack,push 0x31373737
+ShellCodeGen: move 0x3f into the byte at address al,"mov byte al, 0x3f"
+ShellCodeGen: move b to eax,"mov eax, b"
+"ShellCodeSum: xor ecx, ecx",zero out the ecx register
+ShellCodeGen: left shift the contents of eax by 5 bit positions,"shl eax, 5"
+ShellCodeGen: put the syscall 0x43 into the eax register,push byte 0x43 \n pop eax
+ShellCodeGen: call the iprint function,call iprint
+ShellCodeSum: shellcode:,define shellcode label
+ShellCodeSum: pop cx,pop the value on the stack back into cx
+ShellCodeGen: jump to the callz label,jmp callz
+ShellCodeGen: get process group,"mov eax, 65"
+"ShellCodeSum: mov ebx, esp",move esp into ebx
+"ShellCodeSum: xor ecx, ecx",clear ecx register
+ShellCodeSum: syscall_execve equ 11,define syscall_execve equal to 11
+ShellCodeSum: push esp,push the esp onto the stack
+ShellCodeGen: push /bin/sh onto the stack and point the ecx register to the stack register,"push 0x68732f2f \n push 0x6e69622f \n mov ecx, esp"
+ShellCodeSum: loop check_even_odd,decrement the count register and jump to check_even_odd if the count is not equal to zero
+ShellCodeGen: decrement the contents of the cl register and jump to the loopinghere label if the result is not negative,dec cl \n jns loopinghere
+ShellCodeGen: move 37 into al,"mov al, 37"
+"ShellCodeSum: test eax, eax \n jz close",if the contents of the eax register is zero then jump to the label close
+"ShellCodeSum: mov byte [esi+17], al",move al into the byte at address [esi+17]
+ShellCodeGen: push 0x68736162 onto the stack,push 0x68736162
+ShellCodeSum: jeq loop,jump to the code location labeled loop if the operands of the previous comparison are equal
+ShellCodeGen: move the address of the arguments into ecx,"mov ecx, arguments"
+ShellCodeGen: if equal then jump to label l7,je l7
+ShellCodeGen: declare a byte with no label containing the value 0x68,db 0x68
+"ShellCodeSum: mov ebx, 0",return a code of zero
+ShellCodeGen: push 0x2e312e31 to the stack,push 0x2e312e31
+ShellCodeGen: set the ebx register to null,"xor ebx, ebx"
+"ShellCodeSum: cmp cl, dl \n je EncodedShellcode",jump to the EncodedShellcode label if the contents of the cl register is equal to the contents of the dl register
+"ShellCodeSum: mov ecx, arguments",move the address of the arguments into ecx
+ShellCodeGen: if the contents of the edx register is equal to the contents of the ebx register then jump to the memory address 0x8 else move the contents of the edx register into the ebx register,"cmp edx, ebx \n je 0x8 \n mov ebx, edx"
+ShellCodeGen: push 0x78534a52 onto the stack,push 0x78534a52
+ShellCodeSum: letter_c db 'c',allocate a single byte of memory and initialize it to the letter 'c'
+ShellCodeSum: push 0x78534a52,push 0x78534a52 onto the stack
+ShellCodeGen: declare an array of six words each initialized with the numbers 34 45 56 67 75 89,"numbers dw 34, 45, 56, 67, 75, 89"
+"ShellCodeSum: mov al, 70",move 70 into al
+"ShellCodeSum: mov al, close_syscall",move close_syscall into al
+ShellCodeGen: load the effective address of ebx+12 into edx,"lea edx, [ebx+12]"
+ShellCodeGen: subtract 0x24 from the contents in esp and save the result in esp,"sub esp, 0x24"
+"ShellCodeSum: mov ebp, ecx",move ecx into ebp
+ShellCodeSum: my_var dw 0abcdh,define my_var word variable and initialize it to 0abcdh
+"ShellCodeSum: cmp cl, 12 \n jg l2",jump to the label l2 if the contents of the cl register is greater than the decimal value 12
+ShellCodeSum: push byte 0x01 \n pop eax,put the syscall 0x01 into the eax register
+ShellCodeSum: push [var2],push the 4 bytes at address var2 onto the stack
+"ShellCodeSum: z dd 1,2,3",declare three doublewords of memory starting at address z and initialized to 1 2 and 3
+"ShellCodeSum: mov byte cl, 7",move 7 into the byte at address cl
+ShellCodeGen: declare three doublewords of memory starting at address z and initialized to 1 2 and 3,"z dd 1,2,3"
+ShellCodeGen: if the contents of the eax register is zero then jump to the label check_html,"test eax, eax \n jz check_html"
+ShellCodeGen: restore the top of the stack into the ecx register then decrement the ecx register and jump to the l3 label if the contents of the ecx register is not zero else make the system call exit,"pop ecx \n loop l3 \n mov eax, 1"
+ShellCodeGen: clear the ebx register and push its contents onto the stack,"xor ebx, ebx \n push ebx"
+"ShellCodeSum: mov eax, 0x969d8cd0",move 0x969d8cd0 into eax
+"ShellCodeSum: mov ecx, edi",move edi into ecx
+ShellCodeGen: push the 0x78 onto the stack,push 0x78
+"ShellCodeSum: xor ebx, ebx \n push ebx",zero out the ebx register and push zero onto the stack
+ShellCodeGen: push double word 0x74652f2f onto the stack and point the ebx register to the stack register,"push dword 0x74652f2f \n mov ebx, esp"
+ShellCodeGen: push the value 0x6475732f and the value 0x6374652f onto the stack and point the edx register to the stack register,"push 0x6475732f \n push 0x6374652f \n mov edx, esp"
+ShellCodeGen: move the 32-bit value 0x40000 into register ebx,"mov ebx, 0x40000"
+"ShellCodeSum: mov al, 11",put the syscall 11 into the al register
+ShellCodeGen: push 0xa to the stack,push 0xa
+ShellCodeGen: move al into the byte at address [esi+17],"mov byte [esi+17], al"
+ShellCodeGen: push the esp onto the stack,push esp
+"ShellCodeSum: xor ebx, ebx",reset ebx to 0
+ShellCodeGen: jump to the label _parent if the contents of the eax register is not zero else restore the top of the stack into the ecx register,"test eax, eax \n jnz _parent \n pop ecx"
+ShellCodeGen: jump to 0x8 if not zero,jnz 0x8
+ShellCodeGen: move 32 into cl,"mov cl, 32"
+ShellCodeGen: declare the data label,data:
+"ShellCodeSum: mov eax, 65",get process group
+ShellCodeGen: push the dword 0x0101017f onto the stack,push dword 0x0101017f
+ShellCodeGen: return to caller,ret
+ShellCodeSum: dec eax,subtract one from the contents of eax
+ShellCodeSum: inc ecx,increment ecx
+ShellCodeGen: push the byte 6 onto the stack,push byte 6
+"ShellCodeSum: cmp eax, eax \n jne 0x8 \n xor eax, eax",jump to the memory address 0x8 if the contents of the eax register is not equal to the contents of the eax register else zero out the eax register
+ShellCodeGen: perform a logical xor between the address speicified by [ecx + 116] and the dh register and save the result in [ecx + 116],"xor [ecx + 116], dh"
+ShellCodeGen: push the word 0644o onto the stack,push word 0644o
+ShellCodeGen: move the contents of the esi register into the cx register,"mov cx, [esi]"
+ShellCodeGen: push ax onto the stack,push ax
+ShellCodeSum: jne _next,jump to the _next label if the operands of the above comparison are not equals
+ShellCodeGen: push 0x69622f2f onto the stack,push 0x69622f2f
+ShellCodeGen: declare the exit label,exit:
+ShellCodeGen: push 0xb to the stack,push 0xb
+ShellCodeGen: jump to the child label if the zero flag is set,jz child
+"ShellCodeSum: mov [ebx+8], ebx",move ebx into ebx+8
+ShellCodeGen: push the dword 0x62732f2f onto the stack,push dword 0x62732f2f
+"ShellCodeSum: mov bl, 0x9",move 0x9 into bl
+ShellCodeGen: jump to the label _while_loop if the contents of the eax register is negative,"test eax, eax \n js _while_loop"
+ShellCodeGen: define cycle label,cycle:
+ShellCodeGen: jump to the label _read if the zero flag is set,jz _read
+ShellCodeGen: reset ebx to 0,"xor ebx, ebx"
+ShellCodeGen: push the dword 0x6b2f7379 onto the stack,push dword 0x6b2f7379
+ShellCodeSum: find_egg:,define find_egg function
+ShellCodeSum: push eax,preserve eax on the stack
+ShellCodeGen: move 0xc into dl,"mov dl, 0xc"
+ShellCodeSum: push 6,push 6 onto the stack
+ShellCodeSum: call iprint,call the iprint function
+"ShellCodeSum: sub eax, 5d455523",subtract 5d455523 from the contents of the eax register
+ShellCodeSum: dec ecx \n jns duploop,decrement the contents of the ecx register and jump to the duploop label if the result is not negative
+ShellCodeGen: move 0x969d8cd0 into eax,"mov eax, 0x969d8cd0"
+ShellCodeSum: y: dd 0x0,create the doubleword variable y in memory and initialize it to zero
+"ShellCodeSum: mov ecx, 0x0",move 0x0 into ecx
+"ShellCodeSum: lea esi, [esi +4]",load the effective address of the result of the operation [esi +4] into the esi register
+"ShellCodeSum: msg db 'mv test.txt .test.txt && head -c 32 /dev/urandom | base64 | openssl aes-256-cbc -e -in .test.txt -out test.txt -pbkdf2 -k - && rm .test.txt', 0x0a",define msg as the byte string 'mv test.txt .test.txt && head -c 32 /dev/urandom | base64 | openssl aes-256-cbc -e -in .test.txt -out test.txt -pbkdf2 -k - && rm .test.txt'
+ShellCodeSum: dec byte dl,decrement the byte in dl
+"ShellCodeSum: mov [esi+22], al",move al into the address [esi+22]
+ShellCodeGen: subtract 216 from the value stored in eax,"sub eax, 216"
+ShellCodeSum: push name,push name onto the stack
+ShellCodeGen: put the syscall 0x66 into the eax register,push byte 0x66 \n pop eax
+ShellCodeGen: move 0x6c6c756e into eax,"mov eax, 0x6c6c756e"
+ShellCodeSum: ret,return the address off the stack and returns control to that location
+ShellCodeGen: mov the value 0x3b30 into the cx register,"mov cx, 0x3b30"
+ShellCodeGen: push 0x53534150 onto the stack,push 0x53534150
+"ShellCodeSum: cmp [ebp+var_a], 0 \n jnz short loc_4010E5",if the contents of the memory address ebp+var_a is not equal to zero then jump short to the memory location loc_4010E5
+ShellCodeGen: move the contents of y into ecx,"mov ecx, y"
+ShellCodeSum: push word 0x2,push the word 0x2 onto the stack
+ShellCodeGen: push the 0x0a4c4c41 onto the stack,push 0x0a4c4c41
+ShellCodeSum: push dword 0x62732f2f,push the doubleword 0x62732f2f to the stack
+"ShellCodeSum: pop ecx \n loop l3 \n mov eax, 1",restore the top of the stack into the ecx register then decrement the ecx register and jump to the l3 label if the contents of the ecx register is not zero else make the system call exit
+ShellCodeGen: move the memory offset table+esi*4 into ax,"mov ax, table[esi*4]"
+"ShellCodeSum: cmp edx, ebx \n je 0x8 \n mov ebx, edx",if the contents of the edx register is equal to the contents of the ebx register then jump to the memory address 0x8 else move the contents of the edx register into the ebx register
+ShellCodeGen: make the system call dup2,"mov eax, 63"
+ShellCodeSum: push 0x69622f2f,push 0x69622f2f onto the stack
+ShellCodeGen: push the value 0x6e69622f onto the stack,push 0x6e69622f
+"ShellCodeSum: xor ecx, ecx",clear ecx
+ShellCodeGen: fork,"mov eax, 2"
+ShellCodeSum: push 0x6e69622f,push the value 0x6e69622f onto the stack
+"ShellCodeSum: mov [esi+eax], cl",move the contents of cl into the byte at memory address esi+eax
+ShellCodeSum: cdq,clear the edx register

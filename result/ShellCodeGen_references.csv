@@ -1,0 +1,320 @@
+"mov esi, 0x222933f0"
+push 0x204c4c41
+"mov esp, ebp"
+"mov ecx, readbuffer"
+section .data
+"byte_table db 14, 15, 22, 45"
+format:
+odd_number:
+"mov al, 0xcd"
+push bx
+div esi
+"sub ecx, 0x6374612e"
+push 0x61702f63
+section .text
+dec ecx \n jz counter_is_now_zero
+string: db 'tmp.txt'
+"mov byte [ecx+92], dl"
+push 0x4
+int 80h
+"xchg ecx, edx"
+"mov al, 6"
+"mov ax, 00"
+set_mark:
+"sub ax, 13"
+"cmp cl, 0x11 \n jb 0xff \n add dl, 0x5"
+"mov [ecx], 25"
+"cmp byte bl, [esi] \n jne loop_1"
+db 10
+call esp
+"xor ah, ah"
+"xor cl, 0xaa"
+"cmp byte [edx], 0x2e \n jne l2 \n jmp while"
+"test eax, eax \n jz write \n xor eax, eax"
+"cmp al, 0xf2"
+"rol byte [esi], 4"
+"mov long [esi+30], eax"
+"mov [edi], al"
+push 0x74756873
+"mov eax, 1"
+jmp esp
+"cmp eax, edi \n jne infinite"
+push byte 0x43 \n pop eax
+shellcode:
+"mov al, 102"
+"mov eax, 4"
+"mov eax, 5"
+"cmp al, 0xf2 \n je next_page"
+"encodedshellcode: db 0x32,0x51,0x30,0x74,0x69,0x63,0x6f,0xe4,0x8a,0x54,0xe2,0x0c,0x81,0xc1,0x69,0x30,0x69,0x30,0x6a,0x8a,0x51,0xe3,0x8a,0xb1,0xce"
+"mov esi, 0x72702f2f"
+jz decoded_shellcode
+int 0x80
+call _appendfile
+"cmp byte [esi], 0xd \n jl wrap_around"
+"mov cl, byte [esi]"
+"push eax \n mov edx, esp"
+"xor dl, 0xbb \n jz next_cycle"
+pop ebx
+call sprint
+"lea eax, [zero_reg+3]"
+"mov cl, 9"
+"cmp al, 9 \n jge l1"
+"mov al, 05h"
+array dd 20
+choice db 'y'
+"cmp eax, ebx \n je connect \n ja exit"
+dec ecx
+"mov cl, 0102"
+"mov edx, 3"
+b: dd 0x0
+"mov al, 61"
+push ebx
+"mov edx, esp"
+push byte 0x1f
+"mov bx, [esi]"
+push dword 0x6b6e756a
+"sub dx, 15444"
+"mov eax, key"
+"lea eax, [ebx+0xf]"
+"cmp dword [edx], 0x636f7270 \n je while"
+"add eax, esi"
+"mov bl, cl"
+_dup2_loop:
+global _shell
+"add al, 0xa"
+"mov [ebp+22], word ax"
+"xor ebx, ebx"
+"mov edx, ecx"
+"shr ecx, 1"
+"mov eax, 27"
+"cmp eax, ebx \n je connect \n ja exit"
+"shr edx, byte 24"
+"push 0x68732f2f \n push 0x6e69622f \n mov edx, esp"
+push 0xefffff7f
+push 0x3d4c4c41
+mul ebx
+push 0x0a4c4c41
+div edx
+push eax
+push 0x10
+"mov esi, v_src"
+gotocall:
+"mov eax, buzz"
+"push 0x6e7a762d \n mov edi, esp"
+push byte 0x43
+"mov cx, word_table + 3"
+"add edx, 32"
+db '/proc/sys/kernel/randomize_va_spacex'
+"mov ebp, esp"
+"test eax, eax \n jnz checkforfile"
+"mov eax, [ebx+esi*2+4]"
+"xor byte [esi+ecx],0x0f"
+"test eax, eax \n jz ready_to_proxy"
+"mov dl, 0x2"
+push byte 10
+"mov dword [esp-4], esi"
+"mov eax, 4"
+"push esi \n mov eax, esp"
+push sys_execve
+"push 0x68732f2f \n push 0x6e69622f \n mov ecx, esp"
+closefile:
+"cmp eax,ebx"
+push 0x64687373
+push byte chmod_call \n pop eax
+call two
+section .bss
+push byte 0xc \n pop eax
+"mov ebx, 1"
+exit_on_error:
+prepare:
+"mov cx, 0xfff"
+push byte 49
+shell_ret:
+"push 0x6e69622f \n push 0x7273752f \n mov ecx, esp"
+call writestring
+"mov byte [esi + 1], dl"
+push 0x6d722f2f
+"mov eax, 64"
+"mov eax, 6"
+loop l2 \n jmp edi
+jnz top
+push esp
+push 0x6e69622f
+push byte +0x8
+pop eax
+matrix qw 12*10
+"mov edx, eatlen"
+jmp short stage
+push 0x622f7273
+"mov eax, 0x9a8dd091"
+jmp _return
+push 0x0a206873
+next:
+push 0x1c
+bignum: resw 1
+"mov al, 0x06"
+len equ $ - msg
+push 0x2f3a746f
+ymmval: resw 1
+"xchg eax, ebx"
+"mov al, 0xb"
+exit:
+dim: equ 512
+"mov ebx, 4"
+jmp short end
+"rol edi, 1"
+"msg db 'hello, world!', 0xa"
+"add eax, c"
+"mov bl, byte [eax]"
+loop fill
+jns dup2
+"mov eax, 27"
+push byte 6 \n pop eax
+"mov byte [edi], bl"
+"mov ebx, zero_reg"
+jmp short search
+"mov al, 0x66"
+"test eax, eax \n jnz l4 \n call search"
+"mov bl, byte [esi]"
+set_mark:
+jmp short gotocall
+push 0x3a303a3a
+jnc 0x86
+"push byte 3 \n mov ebx, esp"
+"test eax, eax \n jnz l1 \n call myfunct"
+push dword 0x2335738c
+"mov byte [esi+ecx], bl"
+"push 0x6374652f \n mov ecx, esp"
+"push 0x61702f2f \n push 0x6374652f \n mov eax, esp"
+"mov bl, byte [edi]"
+"and eax, 0000000fh"
+"cmp eax, ebx \n je exit \n mov al, 0x4"
+"shr dl,1"
+"mov ax, 010ch"
+"mov bl, 3"
+not eax
+push byte 16
+"lea edx, [esi + 12]"
+mul edx
+"rol edx, 0x4"
+"mov ax, [1000h]"
+"mov eax, 64"
+"mov eax, 6"
+total_students equ 50
+jmp _star
+"cmp al, 0xf2 \n jz _start"
+push 0x68732f2f
+push 0x6f635f64
+"mov edi, eax"
+"mov ebx, filename"
+"ror byte [esi], 0x1"
+"mov al, 15"
+"lea ecx, [zero_reg+117]"
+push dword 0x7264632f
+dup2:
+inc ebx
+"xor [ecx], dh"
+"cmp dword [eax], edx \n jne loop \n jmp eax"
+"mov ebx, type var3"
+"push dword 0x62732f2f \n mov ebx, esp"
+"test eax, eax \n js old_dirent"
+push 0x6873732f
+jz shift_decode
+"mov eax, esp"
+"db ',ajm,pk#########'"
+jnz incaddr
+inc dword [value]
+"cmp byte [esi], 0x7 \n jl lowbound"
+push eax
+"test eax, eax \n js close"
+push word 0x5c11
+incpage:
+"mov ebx, 0"
+push eax
+"mov bl, byte [eax]"
+"sub ebx, 0x2e2aa163"
+inc bl
+"add byte_value, 65"
+"mov eax, 0x8000"
+"mov cl, 13"
+"mov eax, 4"
+"mov ecx, esi"
+jmp loop
+entrypoint:
+"cmp al, 0xf2 \n jz incpage"
+callit:
+push esi
+string db 'test.txt'
+call prepare
+not byte [var2]
+"push 0x64687373 \n mov eax, esp"
+"mov esi, 0x91969dd0"
+"mov eax, 37"
+"loop l2 \n mov ebx, esp"
+start:
+closefile:
+"mov eax, 37"
+push 0x74
+"msg db 'we found the egg!', 0ah, 0dh"
+"loop l2 \n mov ebx, esp"
+"mov byte [esi+12], al"
+"mov edx, esp"
+"mov ebx, [esp]"
+"xchg [ebp+16], ecx"
+"cmp al, 0x38 \n je 0x40 \n push byte 0x1"
+message: db 'hello world!'
+push 0x68735858
+"xor esi, esi"
+"mov cl, 0x2"
+push dword 0x73656c62
+"mov bl, 0xe"
+"and al, 0fh"
+"test eax, eax \n jz short loc_402c13"
+"test eax, eax \n jz write \n xor eax, eax"
+cld
+"shr ax, 1"
+shell:
+"str db 'hey',0"
+push esi
+push word 0x697a
+"mov eax, 64"
+push '/bin'
+"sar ebx, 31"
+jmp short _file
+"lea eax, [zero_reg+6]"
+push 0x0
+inc ax
+egg equ 'egg '
+section .data
+inc dx
+jmp reading
+"mov cl, len"
+"mov dl, 0x7f"
+"mov bl, 2"
+"shl ecx, 2"
+loopnz l1
+"mov eax, 20"
+pop edx
+push byte 9 \n pop eax
+"xor ah, ah"
+"cmp byte al, 2 \n je do_inject \n jmp while"
+push word 0x1b6
+array word 5
+"mov eax, 29"
+call egghunter
+me:
+pop cx
+"xor eax, 0xffffffff"
+push word [edx]
+push eax
+"mov dl, byte 0ffh"
+"push edi \n mov ebx, esp"
+not byte [tmp]
+"xor eax, eax"
+"mov [esp+59], ebx"
+loop 3
+push ecx
+push byte 0x64 \n pop eax
+"add edi, edi"
+"mov long [esi+26], ebx"
+"sub dx, 15444"
