@@ -40,14 +40,14 @@ N_HEADS = 8
 HIDDEN_SIZE = 512
 DROPOUT = 0.25
 BATCH_SIZE = 32
-LR = 1e-4
+LR = 1e-3
 N_EPOCHS = 30
 CODE_MAX_LEN = 50
 NL_MAX_LEN = 50
 GRAD_CLIP = 1.0
 
 
-def tokenize_code():
+def tokenize_code(text):
     return text.split()
 
 def tokenize_nl(text):
@@ -545,9 +545,7 @@ def translate(sentences, model, beam_size, src_field, dest_field, max_len, devic
             pred_translated = [*filter(lambda word: word not in [
                 dest_field.init_token, dest_field.eos_token
             ], pred_translated)]
-            # need modify
-            translated_sentences.append(tokenizer.convert_tokens_to_string(pred_translated))
-            # translated_sentences.append(' '.join(pred_translated))
+            translated_sentences.append(' '.join(pred_translated))
             # Get probabilities
             pred_logps.append(sum([*map(lambda node: node.logps, best_path)]))
             # Get attention weights

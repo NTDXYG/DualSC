@@ -106,9 +106,11 @@ torchtext 0.5.0
 numpy 1.19+
 ```
 
-## How to run
+## How to run on your corpus
 
-just modify the settings in model/DualSC.py and run it.
+1、prepare the 'prefix' in your corpus, some examples can be seen in 'data' folder
+
+2、just modify the settings in model/DualSC.py(such as n_layers/ d_model/ n_heads and more) and run it.
 
 ## How to evaluate
 
